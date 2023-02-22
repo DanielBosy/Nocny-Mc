@@ -2,23 +2,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>User list</title>
+  <title>Status list</title>
 </head>
 <body>
 <table>
   <thead>
   <tr>
     <th>Id</th>
-    <th>Name</th>
-    <th>LastName</th>
-
+    <th>task</th>
   </tr>
   </thead>
-  <c:forEach items="${users}" var="user">
+  <c:forEach items="${status}" var="status">
     <tr>
-      <td>${user.id}</td>
-      <td><c:out value="${user.name}"/></td>
-      <td><c:out value="${user.lastName}"/></td>
+      <td>${status.id}</td>
+      <td><c:out value="${status.status}"/></td>
     </tr>
   </c:forEach>
 </table>

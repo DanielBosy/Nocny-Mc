@@ -20,7 +20,7 @@ public class DefaultTaskController {
         this.defaultTaskRepository = defaultTaskRepository;
 
     }
-    @GetMapping("o")
+    @GetMapping("/default/new")
     public String newTask(Model model) {
         DefaultTask defaultTask = new DefaultTask();
         model.addAttribute("defaultTask", defaultTask);
@@ -36,5 +36,9 @@ public class DefaultTaskController {
         List<DefaultTask> defaultTasks = defaultTaskRepository.findAll();
         model.addAttribute("defaultTasks", defaultTasks);
         return "/default/list";
+    }
+    @GetMapping("/user/view")
+    public String view() {
+        return "/user/view";
     }
 }

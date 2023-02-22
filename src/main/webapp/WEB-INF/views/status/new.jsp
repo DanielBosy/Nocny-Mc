@@ -7,25 +7,19 @@
           href="${pageContext.request.contextPath}/style.css" />
 </head>
 <body>
-<form:form method="post" action="/task/save"
-           modelAttribute="task">
+<p>
+</p>
+    <form:form method="post" action="/status/save"
+           modelAttribute="status">
     <%--        <p>--%>
     <%--            <form:errors path="*"/>--%>
     <%--        </p>--%>
     <p>
-        <form:label path="name">name</form:label>
-        <form:input path="name"/>
-        <form:errors path="name" cssClass="error"/>
+        <label for="status">notes</label>
+        <form:textarea path="status" rows="3"
+                       cols="20"/>
     </p>
-    <p>
-        <form:label path="notes">notes</form:label>
-        <form:input path="notes"/>
-        <form:errors path="notes" cssClass="error"/>
-    </p>
-    <p>
-        <form:input path="user.id" type="text" />
 
-    </p>
     <p>
         <input type="submit">
     </p>

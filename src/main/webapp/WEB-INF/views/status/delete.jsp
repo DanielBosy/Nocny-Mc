@@ -2,12 +2,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Delete user</title>
+    <title>Delete status</title>
 </head>
 <body>
-<form:form method="post" action="/user/delete/${id}">
-  <a href="/user/list">Cancel</a>
-  <input type="submit" value="Delete">
+<form:form method="post" action="/status/delete/${id}">
+    <a href="/status/list">Cancel</a>
+    <input type="submit" value="Delete">
 </form:form>
 </body>
 </html>

@@ -38,6 +38,16 @@ public class TaskController {
         model.addAttribute("task", task);
         return "task/list";
     }
+    @GetMapping("/task/delete/{id}")
+    public String deleteTask(Model model, @PathVariable long id) {
+        model.addAttribute("id", id);
+        return "/task/delete";
+    }
 
+    @PostMapping("/task/delete/{id}")
+    public String deleteTask(@PathVariable long id) {
+        taskRepository.deleteById(id);
+        return "redirect:/task/list";
+    }
 
 }

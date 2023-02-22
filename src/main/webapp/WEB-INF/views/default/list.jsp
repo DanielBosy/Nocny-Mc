@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Publisher list</title>
+  <title>default list</title>
 </head>
 <body>
 <table>
@@ -10,6 +10,7 @@
   <tr>
     <th>Id</th>
     <th>task</th>
+
   </tr>
   </thead>
   <c:forEach items="${defaultTasks}" var="defaultTasks">
@@ -19,5 +20,8 @@
     </tr>
   </c:forEach>
 </table>
+<h4>Sparawdź dla pewności : <a href="/user/view">opis zadań </a></h4>
+
+<h4>Home : <a href="/home">powrót</a></h4>
 </body>
 </html>

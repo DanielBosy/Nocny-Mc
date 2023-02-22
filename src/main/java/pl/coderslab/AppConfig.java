@@ -15,6 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+
 import javax.persistence.EntityManagerFactory;
 import java.util.Locale;
 
@@ -55,8 +56,10 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
-        return new JpaTransactionManager(emf);
+    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+        JpaTransactionManager jpaTransactionManager =
+                new JpaTransactionManager(entityManagerFactory);
+        return jpaTransactionManager;
     }
 
 }

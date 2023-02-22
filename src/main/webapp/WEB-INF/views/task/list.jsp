@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Publisher list</title>
+  <title>Task list</title>
 </head>
 <body>
 <table>
@@ -10,14 +10,22 @@
   <tr>
     <th>Id</th>
     <th>task</th>
+    <th>notes</th>
+
+    <th>userId</th>
   </tr>
   </thead>
   <c:forEach items="${task}" var="task">
-    <tr>
+    <p>
       <td>${task.id}</td>
       <td><c:out value="${task.name}"/></td>
+      <td><c:out value="${task.notes}"/></td>
+      <td><c:out value="${task.user.id}"/></td>
     </tr>
   </c:forEach>
+
 </table>
+
+<h4>Home : <a href="/home">powrót</a></h4>
 </body>
 </html>
