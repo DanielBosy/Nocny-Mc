@@ -3,6 +3,8 @@ package pl.coderslab.status;
 import pl.coderslab.task.Task;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,8 @@ public class Status {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Size(min = 10)
     private String status;
     @ManyToMany
 

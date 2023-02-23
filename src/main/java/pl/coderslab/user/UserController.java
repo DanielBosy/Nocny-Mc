@@ -25,7 +25,10 @@ public class UserController {
     }
 
     @PostMapping("/user/save")
-    public String saveUser(User user) {
+    public String saveUser(@Valid User user,BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "/user/new";
+        }
         userRepository.save(user);
         return "redirect:/user/list";
     }

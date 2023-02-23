@@ -4,6 +4,7 @@ import pl.coderslab.user.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "defaultTask")
@@ -11,7 +12,9 @@ public class DefaultTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Size(min = 3, message = "nazwa musi mieć minumum 3 znaki")
     private String name;
+    @Size(max = 200, message = "notatka nie może być dłusza niż 200 znaków")
     private String notes;
 
     @ManyToOne

@@ -30,6 +30,6 @@
         <input type="submit">
     </p>
 </form:form>
-<h4>Home : <a href="/home">powrót</a></h4>
+<h4>Home : <a href="/back">powrót</a></h4>
 </body>
 </html>

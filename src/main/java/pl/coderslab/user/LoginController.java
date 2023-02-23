@@ -28,6 +28,9 @@ public class LoginController {
     public String login() {
         return "/user/login";
     }
-
+    @GetMapping("/user/loginManager")
+    public String loginM() {
+        return "/user/loginManager";
+    }
 }
 

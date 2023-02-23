@@ -15,5 +15,8 @@ public class HomeController {
     public String login() {
         return "/user/home";
     }
-
+    @GetMapping("back")
+    public String back() {
+        return "/user/back";
+    }
 }

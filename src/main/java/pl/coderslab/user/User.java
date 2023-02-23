@@ -6,6 +6,7 @@ import pl.coderslab.defaultTask.DefaultTask;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -14,8 +15,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Size(min = 3, message = "nazwa musi mieć minumum 3 znaki")
     private String name;
+
+    @Size(min = 3, message = "nazwisko musi mieć minumum 3 znaki")
     private String lastName;
+    @Size(min = 10, message = "hasło musi mieć minumum 10 znaków")
     private String password;
 
     public User(long id, String name, String lastName, String password) {
